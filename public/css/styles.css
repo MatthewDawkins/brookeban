@@ -1,0 +1,96 @@
+/* Navbar */
+
+.navbar {
+  padding: 0;
+}
+
+/* First Navbar */
+
+.initial-header {
+  background-color: blue;
+  color: #fff;
+  padding: 2%;
+}
+
+/* Name/Phone in first navbar */
+
+.name-brand {
+  position: absolute;
+  left: 20%;
+}
+
+.header-phone {
+  position: absolute;
+  right: 30%;
+}
+
+/* Media Icons */
+
+.social-icon {
+  color: #ededed;
+  position: absolute;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+  color: #000;
+}
+
+.email-icon {
+  right: 25%;
+}
+
+.ig-media-icon {
+  right: 23%;
+}
+
+.fb-media-icon {
+  right: 21%;
+}
+
+.twit-media-icon {
+  right: 19%;
+}
+
+/* Second navbar */
+
+ul {
+  list-style-type: none;
+}
+
+.navbar-two {
+  margin-top: 4%;
+  padding: 3%;
+  border-bottom: 1px solid black
+}
+
+.header {
+  top: 0;
+  left: 19%;
+  bottom: 0;
+  position: relative;
+}
+
+.subnames {
+  position: relative;
+  left: 10%;
+  /* MAKE EACH SUBNAME LOAD IN ONE AT A TIME? */
+}
+
+.navigation-items {
+  position: relative;
+  left: 45%;
+  text-transform: uppercase;
+}
+
+/* Home Image */
+
+
+/* Footer */
+
+.footer {
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
