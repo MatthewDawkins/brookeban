@@ -11,9 +11,6 @@ a:hover {
   opacity: 0.8;
 }
 
-#navbar, #home-footer {
-  letter-spacing: 0.1em;
-}
 
 #home-footer {
   position: fixed;
@@ -65,14 +62,10 @@ a:hover {
   height: 13%;
   width: 100%;
   position: absolute;
-  top: 6%;
+  top: 8%;
   border-bottom: 1px black solid;
   text-align: center;
   }
-
-.second-header-description {
-}
-
 
 
 /* Name/Phone in first navbar */
@@ -137,12 +130,6 @@ ul {
   color: black;
 }
 
-.navigation-items {
-  position: relative;
-  left: 45%;
-  text-transform: uppercase;
-}
-
 /* Home Image */
 
 #home-image {
@@ -163,6 +150,7 @@ ul {
   top: 23%;
   width: 100%;
   height: 60%;
+  margin-bottom: 20%;
 }
 
 .container {
@@ -219,4 +207,20 @@ ul {
 .service-pic {
   height: 70%;
   width: 70%;
+  border-radius: 20%;
+  padding-bottom: 3%;
+}
+
+.service-description {
+  padding-bottom: 35%;
+}
+
+.service-title {
+  text-decoration: underline;
+}
+
+.service-header {
+  text-align: center;
+  text-decoration: underline;
+  padding: 1% 0 2% 0;
 }

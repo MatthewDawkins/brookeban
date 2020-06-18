@@ -11,11 +11,10 @@ app.set('view engine', 'ejs');
 //Get current year
 const year = new Date().getFullYear();
 
+
 app.get("/", function(req, res){
   res.render("home", {year: year})
 });
-
-
 
 
 //Set up local host
