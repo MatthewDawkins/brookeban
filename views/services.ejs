@@ -1,36 +1,20 @@
   <!-- SERVICES -->
-  <section id="services">
-    <div class="container-fluid">
-      <h2 class="service-header"> Services </h2>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 center">
-          <img class="service-pic" src="https://assets.entrepreneur.com/content/3x2/2000/20170719082927-image4.jpeg" alt="abc">
-          <h5 class="service-title">Landscaping</h5>
-          <p class="service-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar magna at eleifend rutrum. Aliquam luctus fringilla turpis, non aliquet lorem lacinia quis </p>
-        </div>
-        <div class="col-lg-4 col-md-6 center">
-          <img class="service-pic" src="https://www.familyhandyman.com/wp-content/uploads/2017/07/dfh17jun048-1-shutterstock_365319458.jpg" alt="abc">
-          <h5>Service 2</h5>
-        </div>
-        <div class="col-lg-4 col-md-6 center">
-          <img class="service-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHqid_OwecdbGP8HwYzu89xuD6Vkb8u4WoiYfibfhMMaIXgpbo&usqp=CAU" alt="">
-          <h5>Service 3</h5>
-        </div>
-        <div class="col-lg-4 col-md-6 center">
-          <img class="service-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSMnCfJZWy7AnUkX5U-mTxzodbKhCK7ht0N1mFTULSVrMiNlOoQ&usqp=CAU" alt="">
-          <h5 class="service-title">Service 4</h5>
-          <p class="service-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar magna at eleifend rutrum. Aliquam luctus fringilla turpis, non aliquet lorem lacinia quis </p>
-        </div>
-        <div class="col-lg-4 col-md-6 center">
-          <img class="service-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSjjpwue4qEqrTWmNvxUN63VnaC50lv9J8oLrmmJ6E44o_XOSni&usqp=CAU" alt="">
-          <h5 class="service-title">Service 5</h5>
-          <p class="service-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar magna at eleifend rutrum. Aliquam luctus fringilla turpis, non aliquet lorem lacinia quis </p>
-        </div>
-        <div class="col-lg-4 col-md-6 center">
-          <img class= "service-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhlse0SQn8cHYBNggPdocRkMM-XMsjXkl_proViOVX0vaPaUus&usqp=CAU" alt="">
-          <h5>Service 6</h5>
-        </div>
+<section id="services">
+  <div class="container-fluid">
+    <h2 class="service-header"> Services </h2>
+  </div>
+  <div class="row">
+      <%  services.forEach( function(service) { %>
+      <div class="col-lg-4 col-md-6 center">
+        <a href="/services/<%=service.id%>">
+          <img class="service-pic" src="<%= service.img %>" alt="<%= service.alt %>">
+        </a>
+        <a href="/services/<%=service.id%>">
+          <h5 class="service-title"><%= service.title %></h5>
+        </a>
+        <p class="service-description"><%= service.description %></p>
       </div>
-
+      <% }) %>
     </div>
-    </section>
+  </div>
+</section>
