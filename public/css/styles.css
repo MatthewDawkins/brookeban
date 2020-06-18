@@ -15,6 +15,13 @@ a:hover {
   letter-spacing: 0.1em;
 }
 
+#home-footer {
+  position: fixed;
+  margin: auto;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Navbar */
 
 .navbar {
@@ -32,6 +39,13 @@ a:hover {
   margin-bottom: 1%;
 }
 
+@media (max-width: 1370px and min-width: 1028) {
+  #home-footer {
+    bottom: 0;
+  }
+}
+
+
 @media (max-width: 1028px){
   .hidden {
      display: none;
@@ -48,11 +62,15 @@ a:hover {
   font-family: 'Fira Sans', sans-serif;
   font-weight: bolder;
   font-size: 2rem;
-  height: 20%;
+  height: 13%;
   width: 100%;
   position: absolute;
-  top: 7%;
+  top: 6%;
+  border-bottom: 1px black solid;
   text-align: center;
+  }
+
+.second-header-description {
 }
 
 
@@ -132,6 +150,8 @@ ul {
 }
 
 .background-image {
+  z-index: -1;
+  position: fixed;
   width: 100vw;
   height: 99vh;
 }
@@ -140,7 +160,7 @@ ul {
 
 #services {
   position: absolute;
-  top: 32%;
+  top: 23%;
   width: 100%;
   height: 60%;
 }
