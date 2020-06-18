@@ -11,7 +11,6 @@ a:hover {
   opacity: 0.8;
 }
 
-
 #home-footer {
   position: fixed;
   margin: auto;
@@ -42,7 +41,6 @@ a:hover {
   }
 }
 
-
 @media (max-width: 1028px){
   .hidden {
      display: none;
@@ -67,9 +65,7 @@ a:hover {
   text-align: center;
   }
 
-
 /* Name/Phone in first navbar */
-
 
 .header-phone {
   position: absolute;
@@ -97,7 +93,6 @@ a:hover {
   right: 23%;
 }
 
-
 .fb-media-icon {
   right: 21%;
 }
@@ -124,7 +119,6 @@ ul {
   bottom: 0;
   position: relative;
 }
-
 
 .links {
   color: black;

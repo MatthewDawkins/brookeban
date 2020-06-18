@@ -11,11 +11,29 @@ app.set('view engine', 'ejs');
 //Get current year
 const year = new Date().getFullYear();
 
+// Placeholder Data
+const servicePlaceHolder = require("./libs/placeholder-data");
 
 app.get("/", function(req, res){
-  res.render("home", {year: year})
+  res.render("home", {
+    year: year,
+    services: servicePlaceHolder
+  });
 });
 
+app.get("/services/:serviceId", function(req, res) {
+  const requestedServiceId = req.params.serviceId;
+  // this should be replaced with db query
+  const [ serviceInfo ] = servicePlaceHolder.filter(service => {
+    return ( service.id === requestedServiceId);
+  });
+  res.render("service", {
+    title: serviceInfo.title,
+    description: serviceInfo.description,
+    info: serviceInfo.info2, 
+    year: year
+  });
+});
 
 //Set up local host
 app.listen(3000, function() {
