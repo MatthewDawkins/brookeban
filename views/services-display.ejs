@@ -4,7 +4,7 @@
     <h2 class="service-header"> Services </h2>
   </div>
   <div class="row">
-      <%  services.forEach( function(service) { %>
+      <%  services.forEach((service) => { %>
       <div class="col-lg-4 col-md-6 center">
         <a href="/services/<%=service.id%>">
           <img class="service-pic" src="<%= service.img %>" alt="<%= service.alt %>">
@@ -15,5 +15,5 @@
         <p class="service-description"><%= service.description %></p>
       </div>
       <% }) %>
-    </div>
-</section>
+  </div>
+

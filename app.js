@@ -13,11 +13,20 @@ const year = new Date().getFullYear();
 
 // Placeholder Data
 const servicePlaceHolder = require("./libs/placeholder-data");
+const photoGalleryPlaceHolder = require("./libs/placeholder-gallery-data");
 
 app.get("/", function(req, res){
   res.render("home", {
     year: year,
     services: servicePlaceHolder
+  });
+});
+
+app.get("/photogallery", function(req, res) {
+  res.render("photogallery", {
+    title: "photogallery",
+    info: "info",
+    photos: photoGalleryPlaceHolder
   });
 });
 
@@ -27,11 +36,18 @@ app.get("/services/:serviceId", function(req, res) {
   const [ serviceInfo ] = servicePlaceHolder.filter(service => {
     return ( service.id === requestedServiceId);
   });
+  
+  const relatedGalleryPhotoInfos  = photoGalleryPlaceHolder.filter(photoInfo => {
+    return ( photoInfo.serviceInPhotoById === requestedServiceId);
+  });
+
   res.render("service", {
     title: serviceInfo.title,
     description: serviceInfo.description,
     info: serviceInfo.info,
     subservices: serviceInfo.subservices,
+    relatedGalleryPhotos: relatedGalleryPhotoInfos,
+    services: servicePlaceHolder,
     year: year
   });
 });

@@ -1,0 +1,9 @@
+<div class="photogallery">
+    <h1><%=title%></h1>
+    <h1><%=info%></h1> 
+    <div>
+    <% photos.forEach(photo => { %>
+        <img class="gallery-photo" src="images/<%= photo.photo %>" alt="photo.alt">
+    <% }); %>
+    </div>
+</div>

@@ -8,12 +8,20 @@ const servicePlaceHolder = [
     img: imgURL,
     description: "Small painting description",
     info: "some small info about painting",
-    subservices:[{
-      subTitle: "Painting!!",
-      subImg: imgURL,
-      subDescription: "abc",
-      subAlt: "abc"
-  }]
+    subservices: [
+      {
+        subTitle: "Painting!!",
+        subImg: imgURL,
+        subDescription: "abc",
+        subAlt: "abc"
+      },
+      {
+        subTitle: "Painting02!!",
+        subImg: imgURL,
+        subDescription: "abc02",
+        subAlt: "abc02"
+      },  
+    ]
 },
   {
     id: "service-02",
