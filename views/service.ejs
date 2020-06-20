@@ -1,36 +1,28 @@
-<%- include("header"); -%>
+<%- include("partials/header"); -%>
 
+<%- include("navbar"); -%>
 
-<% subservices.forEach(a => { %>
+<img class="background-image" src="/images/PWLmnkk.jpg" alt="">
 
-  <img class="background-image" src="<%=a.subImg%>" alt="<%=a.subAlt%>">
+<!-- Service title and description -->
+<div class="container-fluid single-service-container center">
+  <h1><%= title %></h1>
+  <h3><%= description %></h3>
+</div>
 
-
-
-  <div class="container-fluid single-service-container center">
-    <div class="row center">
-
-      <div class="col-lg-6 center">
-        <h1><%= a.subTitle %></h1>
-        <h3><%=a.subDescription%></h3>
-      </div>
-      <div class="col-lg-6 center">
-        <h1><%=description%></h1>
-        <h1><%=info%></h1>
-      </div>
-
+<!-- Subservices of current service listed -->
+<%- include("subservices"); -%>
+  
+<!-- Related photos of current service found in gallery displayed -->
+<div class="container-fluid single-service-container center">
+  <h3> related photos </h3>
+  <div class="row center">
+  <% relatedGalleryPhotos.forEach(photo => { %>
+    <div class="col-lg-4 col-md-6 center">
+      <img class="services-pic" src="../images/<%= photo.photo %>" alt="pic">
     </div>
-      </div>
-
-
-<% }) %>
-
-
-
-
-
-
+  <% }); %>
+  </div>
 </div>
-</div>
-
-<%- include("footer"); -%>
+  
+<%- include("partials/footer"); -%>

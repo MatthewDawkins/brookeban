@@ -1,0 +1,9 @@
+<!-- DROPDOWN SERVICE MENU -->
+<li class="dropdown">
+  <a class="dropbtn">services</a>
+    <div class="dropdown-content">
+      <%  services.forEach( function(service) { %>
+        <a href="/services/<%=service.id%>"><%= service.title %></a>
+      <% }) %>
+  </div> 
+</li>
