@@ -147,8 +147,20 @@ ul {
   margin-bottom: 20%;
 }
 
-.container {
+
+
+
+/* Service */
+
+.single-service-container {
+  width: 100%;
+  height: 70%;
+  padding-top: 15%;
 }
+
+
+
+
 
 /* Footer */
 

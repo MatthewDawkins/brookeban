@@ -30,7 +30,8 @@ app.get("/services/:serviceId", function(req, res) {
   res.render("service", {
     title: serviceInfo.title,
     description: serviceInfo.description,
-    info: serviceInfo.info2, 
+    info: serviceInfo.info,
+    subservices: serviceInfo.subservices,
     year: year
   });
 });
