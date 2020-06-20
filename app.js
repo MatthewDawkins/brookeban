@@ -12,13 +12,13 @@ app.set('view engine', 'ejs');
 const year = new Date().getFullYear();
 
 // Placeholder Data
-const servicePlaceHolder = require("./libs/placeholder-data");
-const photoGalleryPlaceHolder = require("./libs/placeholder-gallery-data");
+const servicePlaceholder = require("./libs/placeholder-data");
+const photoGalleryPlaceholder = require("./libs/placeholder-gallery-data");
 
 app.get("/", function(req, res){
   res.render("home", {
     year: year,
-    services: servicePlaceHolder
+    services: servicePlaceholder
   });
 });
 
@@ -26,18 +26,18 @@ app.get("/photogallery", function(req, res) {
   res.render("photogallery", {
     title: "photogallery",
     info: "info",
-    photos: photoGalleryPlaceHolder
+    photos: photoGalleryPlaceholder
   });
 });
 
 app.get("/services/:serviceId", function(req, res) {
   const requestedServiceId = req.params.serviceId;
   // this should be replaced with db query
-  const [ serviceInfo ] = servicePlaceHolder.filter(service => {
+  const [ serviceInfo ] = servicePlaceholder.filter(service => {
     return ( service.id === requestedServiceId);
   });
   
-  const relatedGalleryPhotoInfos  = photoGalleryPlaceHolder.filter(photoInfo => {
+  const relatedGalleryPhotoInfos  = photoGalleryPlaceholder.filter(photoInfo => {
     return ( photoInfo.serviceInPhotoById === requestedServiceId);
   });
 
@@ -47,7 +47,7 @@ app.get("/services/:serviceId", function(req, res) {
     info: serviceInfo.info,
     subservices: serviceInfo.subservices,
     relatedGalleryPhotos: relatedGalleryPhotoInfos,
-    services: servicePlaceHolder,
+    services: servicePlaceholder,
     year: year
   });
 });
