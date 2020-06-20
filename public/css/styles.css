@@ -24,6 +24,10 @@ a:hover {
   padding: 0;
 }
 
+.navbar .navbar-icon {
+  width: 8%
+}
+
 .navbar nav {
   display: inline;
   color: #fff;
@@ -75,16 +79,10 @@ a:hover {
 
 /* Dropdown in navbar */
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.navbar a {
+  color: white;
 }
 
-.navbar {
-  float: left;
-}
 
 .navbar li a, .dropbtn {
   color: white;
@@ -93,7 +91,7 @@ a:hover {
 }
 
 .navbar li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: rgb(1, 1, 41);
 }
 
 .navbar li.dropdown {
@@ -183,9 +181,6 @@ a:hover {
   margin-bottom: 20%;
 }
 
-
-
-
 /* Service */
 
 .single-service-container {
@@ -199,10 +194,6 @@ a:hover {
 .photoGallery {
   display:block;
 }
-
-
-
-
 
 /* Footer */
 
