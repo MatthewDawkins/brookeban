@@ -36,7 +36,7 @@ app.get("/services/:serviceId", function(req, res) {
   const [ serviceInfo ] = servicePlaceholder.filter(service => {
     return ( service.id === requestedServiceId);
   });
-  
+
   const relatedGalleryPhotoInfos  = photoGalleryPlaceholder.filter(photoInfo => {
     return ( photoInfo.serviceInPhotoById === requestedServiceId);
   });

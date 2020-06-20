@@ -1,5 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -53,7 +54,7 @@ a:hover {
   }
 }
 
-@media (max-width: 1028px){
+/* @media (max-width: 1028px){
   .hidden {
      display: none;
   }
@@ -63,11 +64,10 @@ a:hover {
   .hidden {
      display: none;
   }
-}
+} */
 
 .second-header {
   font-family: 'Fira Sans', sans-serif;
-  font-weight: bolder;
   font-size: 2rem;
   height: 13%;
   width: 100%;
@@ -76,6 +76,11 @@ a:hover {
   border-bottom: 1px black solid;
   text-align: center;
   }
+
+.subtitle {
+  font-weight: 700;
+}
+
 
 /* Dropdown in navbar */
 
