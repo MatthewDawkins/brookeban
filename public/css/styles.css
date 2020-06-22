@@ -268,3 +268,7 @@ a:hover {
   text-decoration: underline;
   padding: 1% 0 2% 0;
 }
+
+.copyright {
+  font-size: 0.7rem;
+}
