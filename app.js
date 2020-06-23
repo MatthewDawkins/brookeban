@@ -14,6 +14,7 @@ const year = new Date().getFullYear();
 // Placeholder Data
 const servicePlaceholder = require("./libs/placeholder-data");
 const photoGalleryPlaceholder = require("./libs/placeholder-gallery-data");
+const servicePlaceHolder = require("./libs/placeholder-data");
 
 app.get("/", function(req, res){
   res.render("home", {
@@ -26,7 +27,9 @@ app.get("/photogallery", function(req, res) {
   res.render("photogallery", {
     title: "photogallery",
     info: "info",
-    photos: photoGalleryPlaceholder
+    services: servicePlaceHolder,
+    photos: photoGalleryPlaceholder,
+    year: year
   });
 });
 
@@ -35,6 +38,9 @@ app.get("/services/:serviceId", function(req, res) {
   // this should be replaced with db query
   const [ serviceInfo ] = servicePlaceholder.filter(service => {
     return ( service.id === requestedServiceId);
+  });
+  const updatedServicePlaceholder = servicePlaceholder.map(service => {
+    return ( service.id === requestedServiceId ? { ...service, active: true } : service );
   });
 
   const relatedGalleryPhotoInfos  = photoGalleryPlaceholder.filter(photoInfo => {
@@ -47,8 +53,9 @@ app.get("/services/:serviceId", function(req, res) {
     info: serviceInfo.info,
     subservices: serviceInfo.subservices,
     relatedGalleryPhotos: relatedGalleryPhotoInfos,
-    services: servicePlaceholder,
-    year: year
+    services: updatedServicePlaceholder,
+    year: year,
+    active: true
   });
 });
 
