@@ -2,8 +2,12 @@
 <li class="nav-item dropdown">
   <a class="dropbtn dropdown-toggle">Services</a>
     <div class="dropdown-content dropdown-menu-right">
-      <%  services.forEach( function(service) { %>
-        <a class="dropdown-item" data-toggle="tab" href="/services/<%=service.id%>"><%= service.title %></a>
-      <% }) %>
+      <% services.forEach( function(service) { %>
+        <% if (service.active) { %>
+          <a class="dropdown-item active" data-toggle="tab" href="/services/<%=service.id%>"><%= service.title %></a>
+        <% } else { %>
+          <a class="dropdown-item" data-toggle="tab" href="/services/<%=service.id%>"><%= service.title %></a>
+        <% }; %>
+      <% }); %>
   </div>
 </li>

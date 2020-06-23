@@ -1,9 +1,19 @@
-<div class="photogallery">
-  <h1><%= title %></h1>
-  <h1><%= info %></h1> 
-  <div class="gallery-photo-container">
+<%- include("partials/header"); -%>
+<%- include("navbar"); -%>
+
+
+  <div class="photoGallery-container">
+      <div class="photoGallery-title center">
+        <h1><%= title %></h1>
+        <h3><%= info %></h3> 
+    </div>
+  
+  
+  <div class="photoGallery-images-container center">
   <% photos.forEach(photo => { %>
-    <img class="gallery-photo" src="images/<%= photo.photo %>" alt="photo.alt">
+    <img class="photoGallery-image" src="images/<%= photo.photo %>" alt="photo.alt">
   <% }); %>
   </div>
 </div>
+
+<%- include ("partials/footer"); -%>

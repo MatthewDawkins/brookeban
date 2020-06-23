@@ -1,5 +1,4 @@
 <%- include("partials/header"); -%>
-
 <%- include("navbar"); -%>
 
 <img class="background-image" src="/images/PWLmnkk.jpg" alt="">
@@ -22,7 +21,7 @@
         <% relatedGalleryPhotos.forEach(photo => { %>
         <div class="carousel-item active">
           <div class="col-lg-4 col-md-6 center">
-            <img class="services-pic d-block w-100" src="../images/<%= photo.photo %>" alt="pic">
+            <img class="service-pic d-block w-100" src="../images/<%= photo.photo %>" alt="pic">
           </div>
         </div>
         <% }); %>
