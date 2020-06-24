@@ -6,21 +6,21 @@ const servicePlaceHolder = [
     id: "service-01",
     title: "Painting",
     img: imgURL,
-    description: "Small painting description",
+    description: "Our painting services cover all paint jobs. From any room of the building, to the exterior areas, fences, sheds, etc.",
     info: "some small info about painting",
     subservices: [
       {
-        subTitle: "Painting!!",
+        subTitle: "Interior Painting",
         subImg: imgURL,
-        subDescription: "abc",
+        subDescription: "Paint jobs in any room of your house or building.",
         subAlt: "abc"
       },
       {
-        subTitle: "Painting02!!",
+        subTitle: "Exterior Painting",
         subImg: imgURL,
-        subDescription: "abc02",
+        subDescription: "Painting for any area outside of a house, or building.",
         subAlt: "abc02"
-      },  
+      },
     ]
 },
   {

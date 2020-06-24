@@ -4,19 +4,13 @@
 <img class="background-image" src="/images/PWLmnkk.jpg" alt="">
 
 <!-- Service title and description -->
-<div class="container-fluid single-service-container center">
-  <h1><%= title %></h1>
-  <h4><%= description %></h4>
+<div class="container-fluid single-service-container center service-detail">
+  <h1 style="text-decoration: underline;"><%= title %></h1>
+  <h5><%= description %></h5>
 </div>
 
 <!-- Subservices of current service listed -->
 <%- include("subservices"); -%>
 
-<!-- Related photos of current service found in gallery displayed -->
-<% if (photos.length) {  %>
-  <div class="row justify-content-center">
-    <%- include("carousel"); -%>
-  </div>
-<% } %>
 
 <%- include("partials/footer"); -%>
