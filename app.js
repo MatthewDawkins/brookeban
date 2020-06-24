@@ -32,12 +32,12 @@ app.get("/photogallery", function(req, res) {
    servicePlaceholder.forEach(service => {
     const photosOfService = photoGalleryPlaceholder.filter(photo => photo.serviceInPhotoById === service.id);
     if (photosOfService.length) {
-        photosByService.push(photosOfService) 
+        photosByService.push(photosOfService)
     }
   });
   res.render("photogallery", {
     title: "Projects",
-    info: "info",
+    info: "Photo Gallery of many of our past projects.",
     services: servicePlaceholder,
     photosByService: photosByService,
     year: year

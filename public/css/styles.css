@@ -3,6 +3,11 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  color: black;
+  height: 15px;
+}
+
 a {
   color: black;
 }
@@ -50,7 +55,7 @@ a:hover {
   position: fixed;
   width: 100%;
   z-index: 999;
-  
+
 }
 
 .navbar a {
@@ -89,6 +94,12 @@ a:hover {
   }
 }
 
+@media (max-width:  768px){
+  .second-title {
+    visibility: hidden;
+  }
+}
+
 #carousel {
   width: 900px;
   padding-top: 5%;
@@ -100,7 +111,7 @@ a:hover {
 }
 
 .carousel-item {
-  
+
   overflow: hidden;
   width: 100%;
   }
@@ -177,11 +188,11 @@ a:hover {
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
-	
+
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-	
+
   /* Set up positioning */
   position: fixed;
   z-index: -1;
@@ -201,11 +212,23 @@ a:hover {
   width: 100%;
   padding-top: 10%
 }
-/* Photo Gallery *
+
+.photogallery-divider {
+  border-top: 8px dotted #000;
+  width: 7%;
+}
+
+.photogallery-subtitle {
+  margin-bottom: 2%;
+}
 
 .photoGallery-title-container {
-  position: relative;
+  margin-top: 3%;
 }
+
+/* Photo Gallery *
+
+
 
 
 

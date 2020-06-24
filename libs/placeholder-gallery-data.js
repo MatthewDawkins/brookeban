@@ -4,22 +4,22 @@ const placeholderGallery = [
     {
         serviceInPhotoById: "service-01",
         photo: "placeholder_01.jpg",
-        title: "Painting" 
+        title: "Painting"
     },
     {
         serviceInPhotoById: "service-02",
         photo: photo,
-        title: "Drywall" 
+        title: "Drywalling"
     },
     {
         serviceInPhotoById: "service-03",
         photo: photo,
-        title: "anotha3" 
+        title: "Example 3"
     },
     {
       serviceInPhotoById: "service-01",
       photo: "placeholder_01.jpg",
-      title: "Painting" 
+      title: "Painting"
   },
   {
       serviceInPhotoById: "service-02",
@@ -29,33 +29,33 @@ const placeholderGallery = [
   {
       serviceInPhotoById: "service-03",
       photo: photo,
-      title: "anotha3" 
+      title: "Example 3"
   },
   {
     serviceInPhotoById: "service-01",
     photo: photo,
-    title: "Painting" 
+    title: "Painting"
 },
 {
     serviceInPhotoById: "service-02",
     photo: photo,
-    title: "Drywall" 
+    title: "Drywalling"
 },
 {
     serviceInPhotoById: "service-03",
     photo: photo,
-    title: "anotha5" 
+    title: "Example 5"
 },
 {
   serviceInPhotoById: "service-05",
   photo: photo,
-  title: "anotha5" 
+  title: "Example 5"
 
 },
 {
   serviceInPhotoById: "service-05",
   photo: "placeholder_02.jpg",
-  title: "anotha5" 
+  title: "Example 5"
 }
 ];
 
