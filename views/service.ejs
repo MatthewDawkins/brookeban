@@ -6,36 +6,17 @@
 <!-- Service title and description -->
 <div class="container-fluid single-service-container center">
   <h1><%= title %></h1>
-  <h3><%= description %></h3>
+  <h4><%= description %></h4>
 </div>
 
 <!-- Subservices of current service listed -->
 <%- include("subservices"); -%>
 
 <!-- Related photos of current service found in gallery displayed -->
-<div class="container-fluid single-service-container center">
-  <h3> More Photos </h3>
-  <div class="row center">
-    <div class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <% relatedGalleryPhotos.forEach(photo => { %>
-        <div class="carousel-item active">
-          <div class="col-lg-4 col-md-6 center">
-            <img class="service-pic d-block w-100" src="../images/<%= photo.photo %>" alt="pic">
-          </div>
-        </div>
-        <% }); %>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+<% if (photos.length) {  %>
+  <div class="row justify-content-center">
+    <%- include("carousel"); -%>
   </div>
-</div>
+<% } %>
 
 <%- include("partials/footer"); -%>

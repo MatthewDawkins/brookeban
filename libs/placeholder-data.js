@@ -38,7 +38,7 @@ const servicePlaceHolder = [
   },
     {
       id: "service-03",
-      title: "anotha1",
+      title: "anotha3",
       img: imgURL,
       description: "anotha1",
       info: "dunno",

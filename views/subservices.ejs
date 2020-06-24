@@ -1,14 +1,13 @@
+
+
 <% subservices.forEach(a => { %>
-  <div class="container-fluid single-service-container center">
-    <div class="row">
-      <div class="col-lg-6 center">
-        <h1><%= a.subTitle %></h1>
-        <h3><%=a.subDescription%></h3>
-      </div>
-      <div class="col-lg-6 center">
-        <h1><%=description%></h1>
-        <h1><%=info%></h1>
-      </div>
-    </div>
+  <section id="serviceCard">
+<div class="card">
+  <img class="card-img-top" src="../images/placeholder_02.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= a.subTitle %></h5>
+    <p class="card-text"><%=a.subDescription%></p>
   </div>
+</div>
+</section>
 <% }) %>
