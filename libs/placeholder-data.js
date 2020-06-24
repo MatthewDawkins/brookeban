@@ -38,54 +38,54 @@ const servicePlaceHolder = [
   },
     {
       id: "service-03",
-      title: "anotha3",
+      title: "Example Category 3",
       img: imgURL,
-      description: "anotha1",
+      description: "Example Text 3",
       info: "dunno",
       subservices:[{
-        subTitle: "abcdef",
+        subTitle: "Example Service 3",
         subImg: imgURL,
-        subDescription: "abcd",
+        subDescription: "Example Description",
         subAlt: "abc"
       }]
     },
     {
       id: "service-04",
-      title: "anotha4",
+      title: "Example Category 4",
       img: imgURL,
-      description: "anotha4",
+      description: "Example Text 4",
       info: "dunno",
       subservices:[{
-        subTitle: "abcdef",
+        subTitle: "Example Service 4",
         subImg: imgURL,
-        subDescription: "abcd",
+        subDescription: "Example Description",
         subAlt: "abc"
       }]
     },
 
     {
       id: "service-05",
-      title: "anotha5",
+      title: "Example Category 5",
       img: imgURL,
-      description: "anotha5",
+      description: "Example Text 5",
       info: "dunno",
       subservices:[{
-        subTitle: "abcdef",
+        subTitle: "Example Service 5",
         subImg: imgURL,
-        subDescription: "abcd",
+        subDescription: "Example Description",
         subAlt: "abc"
       }]
     },
     {
       id: "service-06",
-      title: "anotha6",
+      title: "Example Category 6",
       img: imgURL,
-      description: "anotha6",
+      description: "Example Text 6",
       info: "dunno",
       subservices:[{
-        subTitle: "abcdef",
+        subTitle: "Example Service 6",
         subImg: imgURL,
-        subDescription: "abcd",
+        subDescription: "Example Description",
         subAlt: "abc"
       }]
     }
