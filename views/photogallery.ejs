@@ -1,38 +1,16 @@
 <%- include("partials/header"); -%>
 <%- include("navbar"); -%>
-<!-- <img class="background-image" src="/images/PWLmnkk.jpg" alt=""> -->
+
+<div class="section-container">
+  <%- include("jumbotron", {pageInfo: pageInfo}); %>
+</div>
+
 <section id="photoGallery">
-<div class="photoGallery-page-container">
-
-  <div class="photoGallery-title-container center">
-
-        <h1 style="text-decoration: underline;"><%= title %></h1>
-        <h4><%= info %></h4>
-        <hr>
-  </div>
-
-    <% photosByService.forEach(servicePhotoSet => { %>
-
-
-      <div class="row justify-content-center">
-
-
+  <% photosByService.forEach(servicePhotoSet => { %>
+    <div class="row justify-content-center">
       <%- include("carousel", {photos: servicePhotoSet}); -%>
     </div>
-  </div>
-
-    <hr >
-
-
-
-
     <% }); %>
-
-
-
 </section>
-
-
-
 
 <%- include ("partials/footer"); -%>

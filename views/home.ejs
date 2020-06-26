@@ -1,22 +1,12 @@
 <%- include("partials/header"); -%>
 <%- include("navbar"); -%>
 
-<div class="second-header container-fluid">
-  <div class="row">
-    <div class="col-lg-6 ">
-      <h3 class="subtitle second-title">Brookban Construction</h3>
-      <h5 class="subtitle">Landscaping, Drywalling, Renovations, & more.</h5>
-    </div>
-  </div>
-</div>
-
-
-<%- include("services-display"); -%>
-
-<section id="home-image">
-  <div>
-    <img class="background-image" src="/images/PWLmnkk.jpg" alt="">
+<section id="home-title">
+  <div class="section-container">
+    <%- include("jumbotron", {pageInfo: pageInfo}); %>
   </div>
 </section>
+
+<%- include("services-display"); -%>
 
 <%- include("partials/footer"); -%>

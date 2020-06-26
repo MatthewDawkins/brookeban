@@ -1,22 +1,80 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  
 }
 
 hr {
-  color: black;
+  color: rgb(28, 28, 32);
   height: 15px;
 }
 
 a {
-  color: black;
+  color: rgb(28, 28, 32);
 }
-
 
 a:hover {
-  color: #fff;
+  color: rgb(247, 245, 242);
   opacity: 0.8;
 }
+
+/* Generic Section Styles */
+
+.section-container {
+  position: relative;
+  padding-top: 1%;
+  color: rgb(28, 28, 32);
+}
+
+.section-title {
+  margin-bottom: .5%;
+  padding: 5% 7%;
+}
+
+.section-description {
+  padding: 0 0 4% 11%;
+  font-family: 'Assistant', sans-serif;
+}
+
+.section-container hr {
+  border-color: darkgray;
+  width: 95%;
+  padding-bottom: 1%;
+  margin: auto;
+}
+
+.subsection-container {
+  margin: 5% 0 10% 0;
+}
+  
+ .jumbotron {
+  color: rgb(247, 245, 242);
+  margin: 3% 0 2% 0;
+  padding-top: 5%;
+  background-size: cover;
+  position: relative;
+  background-color: #000430;
+  height: 700px; 
+  z-index: -1;;
+ }
+
+ .darken-with-text div {
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -5%;
+}
+
+
+.darken-with-text h1 {
+  margin: 0;
+  color: white;
+  padding-top: 13%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Home Footer */
 
 #home-footer {
   position: fixed;
@@ -26,33 +84,57 @@ a:hover {
   z-index: 999;
 }
 
-#serviceCard {
-  position: relative;
-  width: 70%;
-  margin-top: 3%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
+@media (max-width: 1370px and min-width: 1028) {
+  #home-footer {
+    bottom: 0;
+  }
 }
 
+#photoGallery, #service {
+  width: 80%;
+  background: rgb(247, 245, 242, .88);
+  margin: -11% auto 9% auto;
+  padding: 1% 0 2% 0;
+  position: relative;
+
+}
+
+#subservice {
+  width: 80%;
+  background: rgb(247, 245, 242, .98);
+  margin: 0 auto -5% auto;
+  position: relative;
+}
+
+/* Subservice and Subservice-Card*/
+
 @media (max-width: 1360px){
-  #serviceCard {
-    margin-bottom: 25%;
+  #subservice {
+    margin-bottom: 8%;
   }
+}
+
+#subservice .card {
+  position: relative;
+  width:100%;
+  display: block;
+  margin: 0 auto 0 auto;
+  background-color: rgb(247, 245, 242);
 }
 
 .card-title, .card-text {
   text-align: center;
 }
 
+.card-text {
+  font-family: 'Assistant', sans-serif;
+}
 
 .card-img-top {
   width: 100%;
-  height: 30vh;
+  height: 22vh;
   object-fit: cover;
-  }
-
+}
 
 /* Navbar */
 
@@ -60,33 +142,43 @@ a:hover {
   background-color: #000430;
   background-image: -webkit-linear-gradient(90deg,#000430 20%,#2a3c8e 80%);
   opacity: 0.95;
-  color: #fff;
+  color: rgb(247, 245, 242);
   padding: 0.5%;
   margin-bottom: 1%;
   position: fixed;
   width: 100%;
   z-index: 999;
+}
 
+.navbar-brand-container {
+  width: 350px;
+}
+
+.navbar-icon-container {
+  width: 70px; /* width of container */
+  height: 70px; /* height of container */
+  object-fit: cover;
+}
+
+.navbar-icon {
+  margin: -10px -50px -7px 0;
 }
 
 .navbar a {
-  color: #fff;
+  color: rgb(247, 245, 242);
 }
 
 .navbar ul li {
-  color: #fff;
-}
-
-.navbar img {
-  width: 70px;
+  color: rgb(247, 245, 242);
 }
 
 .navbar .dropdown-item {
   color: black;
+  font-family: 'Assistant', sans-serif;
 }
 
 .navbar .dropdown-item .active {
-  background-color: grey;
+  background-color: darkgray;
 }
 
 .navbar nav {
@@ -95,76 +187,44 @@ a:hover {
 }
 
 .navbar nav a {
-  color: #fff;
+  color: rgb(247, 245, 242);
   padding: 14px 16px;
 }
 
-@media (max-width: 1370px and min-width: 1028) {
-  #home-footer {
-    bottom: 0;
-  }
-}
-
-@media (max-width:  768px){
-  .second-title {
-    visibility: hidden;
-  }
-}
+/* Carousel */
 
 #carousel {
-  width: 900px;
-  padding-top: 5%;
-  padding-bottom: 10%;
+  width: 70%;
+  padding: 1% 0 3% 0;
 }
+
+.carousel-header {
+  margin: -.5% 0 3% 0;
+}
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-  filter: invert(1);
+  filter: brightness(95%);
+}
+
+.carousel-indicators {
+  filter: brightness(75%);
 }
 
 .carousel-item {
-
+  height: 575px;
   overflow: hidden;
   width: 100%;
-  }
-  .carousel-item img {
-  width: 100%;
-  }
-
-/* @media (max-width: 1028px){
-  .hidden {
-     display: none;
-  }
 }
 
-@media (max-width: 1370px and min-width: 1028){
-  .hidden {
-     display: none;
-  }
-} */
-
-.second-header {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 2rem;
-  height: 13%;
+.carousel-item img {
   width: 100%;
-  position: relative;
-  padding-top: 8%;
-  padding-bottom: 5%;
-  border-bottom: 1px black solid;
-  text-align: center;
-  }
-
-.subtitle {
-  font-weight: 700;
 }
-
-
-
 
 /* Media Icons */
 
 .social-icon {
-  color: #ededed;
+  color: rgb(247, 245, 242);
   position: absolute;
 }
 
@@ -189,12 +249,6 @@ a:hover {
   right: 19%;
 }
 
-/* Home Image */
-
-#home-image {
-
-}
-
 .background-image {
   /* Set rules to fill background */
   min-height: 100%;
@@ -203,6 +257,7 @@ a:hover {
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
+  opacity: 45%;
 
   /* Set up positioning */
   position: fixed;
@@ -218,56 +273,13 @@ a:hover {
   }
 }
 
-#photoGallery {
-  position: relative;
-  width: 100%;
-  padding-top: 10%
-}
-
-
-
-.photogallery-subtitle {
-  margin-bottom: 2%;
-}
-
-.photoGallery-title-container {
-  margin-top: 3%;
-}
-
-/* Photo Gallery */
-
-
-
-
-
-
-
-
-#services {
-  padding: 0 2%;
-}
-
-
-/* Service */
-
-.single-service-container {
-  width: 100%;
-  height: 70%;
-  padding-top: 15%;
-}
-
-.service-detail {
- width: 40%;
- border-bottom: 1px solid black;
-}
-
 /* Footer */
 
 .footer {
   background-color: #000430;
   background-image: -webkit-linear-gradient(90deg,#000430 20%,#2a3c8e 80%);
   opacity: 0.95;
-  color: #fff;
+  color: rgb(247, 245, 242);
   bottom: 0%;
   position: absolute;
   width: 100%;
@@ -276,7 +288,7 @@ a:hover {
 
 .social-footer {
   position: relative;
-  color: #fff;
+  color: rgb(247, 245, 242);
 }
 
 .contact-footer {
@@ -294,41 +306,45 @@ a:hover {
   color: #000;
 }
 
-.marg-bot {
-  margin-bottom: 1%;
-}
-
 /* Center */
 .center {
   text-align: center;
 }
 
-.padding {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
+#services {
+  width: 75%;
+  margin: 2.5% auto 10% auto;
+  padding: 1% 3% 1% 3%;
+  background-color: rgb(247, 245, 242, .95);
+
+  color: rgb(28, 28, 32);
 }
 
 .service-pic {
-  width: 60%;
-  border-radius: 20%;
-  padding-bottom: 3%;
+  width: 70%;
+  padding-bottom: 2%;
+  margin-bottom: 3%;
   position: relative;
 }
 
 .service-description {
+  margin: 0 auto 0 auto;
+  width: 50%;
   padding-bottom: 20%;
+  font-family: 'Assistant', sans-serif;
 }
 
 .service-title {
   text-decoration: underline;
+  padding-bottom: 2%;
+
 }
 
 .service-header {
   text-align: center;
   text-decoration: underline;
-  padding: 1% 0 5% 0;
+
+  padding: 1.5% 0 1.5% 0;
 }
 
 .copyright {
