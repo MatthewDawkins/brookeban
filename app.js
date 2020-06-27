@@ -21,7 +21,12 @@ const servicePlaceholder = require("./libs/placeholder-data");
 app.get("/", function(req, res){
   res.render("home", {
     year: year,
-    services: servicePlaceholder
+    services: servicePlaceholder,
+    pageInfo: {
+      title: "Brookban Construction",
+      description: "Landscaping, Drywalling, Renovations, & more.",
+      headerImg: "placeholder_01.jpg"
+    }
   });
 });
 
@@ -36,8 +41,11 @@ app.get("/photogallery", function(req, res) {
     }
   });
   res.render("photogallery", {
-    title: "Projects",
-    info: "Photo Gallery of many of our past projects.",
+    pageInfo: {
+      title: "Projects",
+      description: "Photo Gallery of many of our past projects.",
+      headerImg: "placeholder_02.jpg"
+    },
     services: servicePlaceholder,
     photosByService: photosByService,
     year: year
@@ -60,8 +68,11 @@ app.get("/services/:serviceId", function(req, res) {
     return (service.id === requestedServiceId ? { ...service, active: true } : service)
   })
   res.render("service", {
-    title: serviceInfo.title,
-    description: serviceInfo.description,
+    pageInfo: {
+      title: serviceInfo.title,
+      description: serviceInfo.description,
+      headerImg: "placeholder_01.jpg"
+    },
     info: serviceInfo.info,
     subservices: serviceInfo.subservices,
     photos: relatedGalleryPhotos,

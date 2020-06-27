@@ -3,14 +3,19 @@
 
 <img class="background-image" src="/images/PWLmnkk.jpg" alt="">
 
-<!-- Service title and description -->
-<div class="container-fluid single-service-container center service-detail">
-  <h1 style="text-decoration: underline;"><%= title %></h1>
-  <h5><%= description %></h5>
+<div class="section-container">
+  <%- include("jumbotron", {pageInfo: pageInfo}); %>    
 </div>
 
-<!-- Subservices of current service listed -->
-<%- include("subservices"); -%>
+<!-- Service title and description -->
+<section id="service">
 
+<!-- Subservices of current service listed -->
+  <section id="subservices">
+    <div class="subsection-container">
+      <%- include("subservices"); -%>
+    </div>
+  </section>
+</section>
 
 <%- include("partials/footer"); -%>
