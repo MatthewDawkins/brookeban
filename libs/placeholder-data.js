@@ -106,10 +106,10 @@ const servicePlaceHolder = [
       id: "service-08",
       title: "Example Category 8",
       img: imgURL,
-      description: "Example Text 8",
+      description: "Our painting services cover all paint jobs. From any room of the building, to the exterior areas, fences, sheds, etc.",
       info: "dunno",
       subservices:[{
-        subTitle: "Example Service 8",
+        subTitle: "Our painting services cover all paint jobs. From any room of the building, to the exterior areas, fences, sheds, etc.",
         subImg: imgURL,
         subDescription: "Example Description",
         subAlt: "abc"
