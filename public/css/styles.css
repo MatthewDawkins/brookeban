@@ -126,6 +126,9 @@ h1, h2, h3 {
 }
 
 @media (max-width: 768px) {
+  #hero {
+    height: 60vh;
+  }
   #hero h1 {
     font-size: 40px;
     line-height: 47px;
@@ -232,21 +235,19 @@ a:hover  {
 
 @media (max-width: 575.98px) { 
   h3 {
-    font-size: 23px;
- 
+    font-size: 26px;
   }
   h5 {
-    font-size: 20px;
+    font-size: 24px;
   }
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   h3 {
-    font-size: 24px;
-
+    font-size: 27px;
   }
   p {
     font-size: 19px;
@@ -260,12 +261,11 @@ a:hover  {
   }
 }
 
+
 .about {
-  position: relative;
-  padding: 1vh auto 1vh auto;
-  margin: 1vh auto 1vh auto;
-  height: 100%;
-  width: 78%;
+  margin-bottom: 2vh;
+  padding: 2vh;
+  margin: 0 auto 2vh auto;
 }
 
 .about .icon {
@@ -291,8 +291,9 @@ a:hover  {
   max-height: 100%;
   border-radius: 1%;
   object-fit: cover;
-  display: block; /* remove extra space below image */
+  position: relative;
 }
+  
 
 .about .icon {
   height: 100%;
@@ -313,7 +314,7 @@ a:hover  {
 .service .card {
   position: relative;
   width:100%;
-  display: block;
+  display: inline-block;
   background-color: rgb(247, 245, 242);
 }
 
@@ -331,6 +332,8 @@ a:hover  {
 
 .card-img-top {
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   object-fit: cover;
 }
+
+
