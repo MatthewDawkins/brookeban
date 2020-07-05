@@ -1,27 +1,40 @@
-<!-- FOOTER -->
-<section id="home-footer">
-  <div class="container-fluid footer">
-    <div class="row contact-footer">
-      <div class="hidden col-lg-6 contact">
-        <h5>Call: 905-703-9274</h5>
+<div class="d-none d-md-block">
+  <footer class="footer">
+    <div class="container-fluid fixed-bottom">
+      <div class="row mt-1">
+        <div class="col text-md-left">
+          <h4>Call: 905-703-9274</h4>
+        </div>
+        <div class="col text-md-right">
+          <h4>Email: Service@brookban.com</h4>
+        </div>
       </div>
-      <div class="col-lg-6 contact">
-        <h5>Email: Service@brookban.com</h5>
+      <div class="col text-center mb-1">
+        <p>test | Copywright © <%= year %> Brookban Construction | test</p>
       </div>
-    </div>
-    <!-- <div class="row marg-bot">
-      <div class="col-lg-4">
-        <a class="social-footer" href="NEED THEIR EMAIL STILL"><i class="footer-icon fab fa-instagram fa-1x"></i></a>
-      </div>
-      <div class="col-lg-4">
-        <a class="social-footer" href="NEED THEIR EMAIL STILL"><i class="footer-icon fab fa-facebook-f fa-1x"></i></a>
-      </div>
-      <div class="col-lg-4">
-        <a class="social-footer" href="NEED THEIR EMAIL STILL"><i class="footer-icon fab fa-twitter fa-1x"></i></a>
-      </div>
-    </div> -->
-    <h6 class="center copyright">Brookban Construction © <%=year%></h6>
-  </div>
-</section>
+  </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- Jquery -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    var pathname = window.location.pathname;
+    $('.navbar-nav > li > a[href="' + pathname + '"]').parent().addClass('active');
+    $('.dropdown-item[href="' + pathname + '"]').parents().addClass('active');
+    $('.dropdown-item[href="' + pathname + '"]').addClass('active');
+    $('.accordion > .card').hover(function () {
+      $('.accordion > .card').removeClass('active');
+      $(this).addClass("active");
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -1,21 +1,35 @@
-<%- include("partials/header"); -%>
-<%- include("navbar"); -%>
+<%- include("partials/header"); -%> <%- include("navbar"); -%>
 
-<img class="background-image" src="/images/PWLmnkk.jpg" alt="">
+<section id="hero" class="d-flex m-0">
+  <div class="container-fluid pl-3 align-self-center">
+    <h1><%= tileInfo.title %></h1>
+    <h5 class="pl-5"><%= tileInfo.description %></h5>
+  </div>
+</section>
 
-<div class="section-container">
-  <%- include("jumbotron", {pageInfo: pageInfo}); %>    
-</div>
+<section id="main" class="main">
 
-<!-- Service title and description -->
-<section id="service">
-
-<!-- Subservices of current service listed -->
-  <section id="subservices">
-    <div class="subsection-container">
-      <%- include("subservices"); -%>
+  <!-- Service page displays a information card for each subtype of a single service category -->
+  <section id="service" class="service">
+    <div class="container-fluid">
+      <div class="row my-3 justify-content-center">
+        <% subservicesList.forEach(a => { %>
+        <div class="col-lg-3 col-md-6 col-sm-9 px-1 mb-3">
+          <div class="card h-100">
+            <img class="card-img-top" src="../images/placeholder_02.jpg" alt="Card image cap" />
+            <div class="card-body m-1 p-0">
+              <h5 class="card-title m-0" style="text-decoration: underline;">
+                <%= a.subTitle %>
+              </h5>
+              <p class="card-text"><%=a.subDescription%></p>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
     </div>
   </section>
+
 </section>
 
 <%- include("partials/footer"); -%>

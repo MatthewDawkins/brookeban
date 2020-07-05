@@ -8,77 +8,68 @@ const ejs = require("ejs");
 app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
-//Get current year
+// Get current year
 const year = new Date().getFullYear();
-
 // Placeholder Data
-
 const photoGalleryPlaceholder = require("./libs/placeholder-gallery-data");
 const servicePlaceholder = require("./libs/placeholder-data");
 
 
 
-app.get("/", function(req, res){
+app.get("/", function (req, res) {
   res.render("home", {
-    year: year,
-    services: servicePlaceholder,
-    pageInfo: {
+    tileInfo: {
       title: "Brookban Construction",
       description: "Landscaping, Drywalling, Renovations, & more.",
-      headerImg: "placeholder_01.jpg"
-    }
+      titleAreaImg: "placeholder_01.jpg"
+    },
+    year: year,
+    servicesList: servicePlaceholder,
   });
 });
 
 
 
-app.get("/photogallery", function(req, res) {
-  const photosByService = [];
-   servicePlaceholder.forEach(service => {
-    const photosOfService = photoGalleryPlaceholder.filter(photo => photo.serviceInPhotoById === service.id);
-    if (photosOfService.length) {
-        photosByService.push(photosOfService)
+app.get("/projects", function (req, res) {
+  const serviceGalleries = [];
+  servicePlaceholder.forEach(service => {
+    const servicePhotos = photoGalleryPlaceholder.filter(photo => photo.serviceID === service.id);
+    if (servicePhotos.length) {
+      serviceGalleries.push(servicePhotos)
     }
   });
-  res.render("photogallery", {
-    pageInfo: {
+
+  res.render("projects", {
+    tileInfo: {
       title: "Projects",
-      description: "Photo Gallery of many of our past projects.",
-      headerImg: "placeholder_02.jpg"
+      description: "examples of past work",
+      titleAreaImg: "placeholder_02.jpg"
     },
-    services: servicePlaceholder,
-    photosByService: photosByService,
+    servicesList: servicePlaceholder,
+    serviceGalleries: serviceGalleries,
     year: year
   });
 });
 
 
 
-app.get("/services/:serviceId", function(req, res) {
-  const requestedServiceId = req.params.serviceId;
-  // this should be replaced with db query
-  const [ serviceInfo ] = servicePlaceholder.filter(service => {
-    return ( service.id === requestedServiceId);
-  });
-  const relatedGalleryPhotos = photoGalleryPlaceholder.filter(photo => {
-    return (photo.serviceInPhotoById === requestedServiceId);
+app.get("/services/:serviceId", function (req, res) {
+  const reqServiceID = req.params.serviceId;
+  const [serviceInfo] = servicePlaceholder.filter(service => {
+    return (service.id === reqServiceID);
   });
 
-  const updatedServicePlaceholder = servicePlaceholder.map(service => {
-    return (service.id === requestedServiceId ? { ...service, active: true } : service)
-  })
+
   res.render("service", {
-    pageInfo: {
+    tileInfo: {
       title: serviceInfo.title,
       description: serviceInfo.description,
-      headerImg: "placeholder_01.jpg"
+      titleAreaImg: "placeholder_01.jpg"
     },
     info: serviceInfo.info,
-    subservices: serviceInfo.subservices,
-    photos: relatedGalleryPhotos,
-    services: updatedServicePlaceholder,
+    subservicesList: serviceInfo.subservicesList,
+    servicesList: servicePlaceholder,
     year: year,
-
   });
 });
 
@@ -86,6 +77,6 @@ app.get("/services/:serviceId", function(req, res) {
 
 //Set up local host
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("server is running on port ${PORT}");
 });

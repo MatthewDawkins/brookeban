@@ -1,0 +1,41 @@
+<%- include("partials/header"); -%>
+<%- include('navbar', { servicesList: servicesList }); -%>
+
+
+<section id="hero" class="d-flex m-0">
+  <div class="container-fluid pl-3 align-self-center">
+    <h1><%= tileInfo.title %></h1>
+    <h5 class="pl-5"><%= tileInfo.description %></h5>
+  </div>
+</section>
+
+
+<section id="main" class="main">
+
+  <!-- Collapsed photogallery menu, onclick expanding to show carousel of photos by service category -->
+  <section id="photoGallery" class="photoGallery">
+    <div id="accordion" class="container-fluid accordion my-4">
+      <% serviceGalleries.forEach(function(gallery, index) {  %>
+      <div class="row card text-align-center mx-5">
+        <div class="card-header w-100 center text-align-center" id="heading<%= index %>">
+          <h3 class="my-0">
+            <button class="btn btn-link w-100 h-100" data-toggle="collapse" data-target="#collapse<%= index %>"
+              aria-expanded="false" aria-controls="collapse<%= index %>">
+              <%= gallery[0].title %>
+            </button>
+          </h3>
+        </div>
+        <div id="collapse<%= index %>" class="collapse" aria-labelledby="heading<%= index %>" data-parent="#accordion">
+          <div class="card-body">
+            <%- include("carousel", {photos: gallery}); -%>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </section>
+
+</section>
+
+
+<%-include ("partials/footer"); -%>
