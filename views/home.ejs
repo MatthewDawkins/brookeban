@@ -1,12 +1,77 @@
-<%- include("partials/header"); -%>
-<%- include("navbar"); -%>
+<%- include('partials/header'); -%>
+<%- include('navbar', { servicesList: servicesList }); -%>
 
-<section id="home-title">
-  <div class="section-container">
-    <%- include("jumbotron", {pageInfo: pageInfo}); %>
+<section id="hero" class="d-flex m-0">
+  <div class="container-fluid pl-3 align-self-center">
+    <h1><%= tileInfo.title %></h1>
+    <h5 class="pl-4"><%= tileInfo.description %></h5>
   </div>
 </section>
 
-<%- include("services-display"); -%>
+<section id="main" class="main">
 
-<%- include("partials/footer"); -%>
+  <!-- About/Featured section of Homepage -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 align-self-center d-md-none d-lg-block">
+          <img class="img-main float-right" src="./images/placeholder_02.jpg" alt="" />
+        </div>
+        <div class="col-lg-5">
+          <span>
+            <h3 class="mx-2" style="text-decoration: underline;">Featured Services</h3>
+            <p class="mx-2 mb-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua.
+            </p>
+            <div class="icon-box">
+              <span class="vertical-align-center">
+                <img class="icon float-left mr-2 p-3" src="./images/measurement-tool (1).svg"
+                  class="rounded mx-auto d-block" alt="...">
+                <h5 class="mb-0 align-self-center pt-2">Corporis voluptates sit</h5>
+                <p class="pb-0">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </span>
+            </div>
+            <div class="icon-box" data-aos="fade-up">
+              <span>
+                <img class="icon float-left mr-2 p-3" src="./images/drill.svg" class="rounded mx-auto d-block"
+                  alt="...">
+                <div class="text vertical-align-center">
+                  <h5 class="mb-0 align-self-center pt-2">Corporis voluptates sit</h5>
+                  <p class="pb-0">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip
+                  </p>
+                </div>
+              </span>
+            </div>
+        </div>
+      </div>
+      </span>
+    </div>
+  </section>
+
+  <!-- Services section of Homepage -->
+  <section id="services-display" class="services-display">
+    <div class="container-fluid my-3 pb-4">
+      <div class="row">
+        <div class="col py-2">
+          <h3 class="service-header">Our Services</h3>
+        </div>
+      </div>
+      <div class="row">
+        <% servicesList.forEach(service => { %>
+        <div class="col-lg-3 col-md-6 px-3 center">
+          <a href="services/<%= service.id %>" class="service-display-area">
+            <img class="img-fluid" src="<%= service.img %>" alt="<%= service.alt %>" />
+            <h4 class="service-title my-0"><%= service.title %></h4>
+            <p class="service-description w-75"><%= service.description %></p>
+          </a>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<%- include('partials/footer'); -%>
